@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+/* later used in external doc*/
+:root {
+  --col1_nav: #4e4c51;
+  --col2_nav: #A18DB3;
+  --col3_nav: #73648a;
+  --col4_nav: #453750;
+  --col5_nav: #AB9CC4;
+  --col6_nav: #5F5271;
+  --sidebar_col: #4e4c51;
+  --text_col: white;
+  --text_font: 'Roboto', sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+  height: 110%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /*overflow: hidden;*/
+}
+
+body {
+  color: var(--body_font_col);
+  font-family: var(--body_font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--text_font);
+  color: var(--text_col);
+  font-weight: 900;
+}
+
+p {
+  font-family: var(--text_font);
+  color: var(--text_col);
+  font-weight: 100;
+}
+
+#topbar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--sidebar_col);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  height: 4em;
+  line-height: 4em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+#topbar a {
+  display: block;
+  color: var(--text_col);
+}
+
+.active-nav {
+  position: relative;
+  /*this is for adjusting the bar fuck with %s*/
+}
+.active-nav__bar {
+  background-color: white;
+  top: 3.5em;
+  position: absolute;
+  width: 10%;
+  height: 0.5em;
+  transition: 0.3s ease-in-out;
+}
+.show-0 .active-nav__bar {
+  transform: translate3d(30%, 0, 0);
+}
+.show-1 .active-nav__bar {
+  transform: translate3d(200%, 0, 0);
+}
+.show-2 .active-nav__bar {
+  transform: translate3d(365%, 0, 0);
+}
+.show-3 .active-nav__bar {
+  transform: translate3d(535%, 0, 0);
+}
+.show-4 .active-nav__bar {
+  transform: translate3d(700%, 0, 0);
+}
+.show-5 .active-nav__bar {
+  transform: translate3d(870%, 0, 0);
+}
+
+#carousel {
+  min-height: 100%;
+  height: 110%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d;
+  margin: 4em auto 0;
+  overflow: hidden;
+}
+#carousel > ul {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  list-style: none outside;
+  margin: 0;
+  overflow: hidden;
+}
+#carousel > ul.animate {
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transition: 0.3s ease-in-out;
+}
+#carousel > ul > li {
+  height: 100%;
+  float: left;
+  transform: translate3d(0, 0, 0);
+}
+
+.page {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page.far_lefty {
+  background: var(--col1_nav);
+  left: -300%;
+}
+.page.lefty {
+  background: var(--col2_nav);
+  left: -200%;
+}
+.page.mid-lefty {
+  background: var(--col3_nav);
+  left: -100%;
+}
+.page.mid-righty {
+  background: var(--col4_nav);
+  left: 100%;
+}
+.page.righty {
+  background: var(--col5_nav);
+  left: 200%;
+}
+.page.far_righty {
+  background: var(--col6_nav);
+  left: 300%;
+}
+.page header {
+  padding: 1em;
+}
+.page header h1 {
+  font-size: 3em;
+}
+
+#success_message {
+  display: none;
+}
+
+fieldset {
+  position: fixed;
+  background-color: clear;
+  border: 0;
+  color: var(--text_col);
+}
+
+.fsSubmitButton {
+  background-color: gray;
+}
