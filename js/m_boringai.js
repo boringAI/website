@@ -180,7 +180,7 @@ function Carousel(el) {
 
     setContainerOffset(dragOffset + paneActiveOffset);
   }
-  /*
+  
   function onPressRelease(deltaX, direction) {
     if(Math.abs(deltaX) > paneWidth / 2) {
       if(deltaX > 0) {
@@ -191,7 +191,7 @@ function Carousel(el) {
     } else {
       self.throttledShowPane(paneActiveIdx, true);
     }
-  }*/
+  }
   
   function hammerTime(ev) {
     switch(ev.type) {
@@ -212,8 +212,8 @@ function Carousel(el) {
     dragBlockHorizontal: true
   });
   mc.add(new Hammer.Pan({ threshold: 10, pointers: 0 }));
-  mc.add(new Hammer.Swipe().recognizeWith(mc.get('pan')));
-  mc.on("swipeleft swiperight panstart panmove", hammerTime);
+  /*mc.add(new Hammer.Swipe().recognizeWith(mc.get('pan')));
+  mc.on("swipeleft swiperight panstart panmove", hammerTime);*/
   mc.on("hammer.input", function (ev) {
     if (ev.isFinal) {
       onPressRelease(ev.deltaX, ev.direction);
