@@ -180,7 +180,7 @@ function Carousel(el) {
 
     setContainerOffset(dragOffset + paneActiveOffset);
   }
-  
+  /*
   function onPressRelease(deltaX, direction) {
     if(Math.abs(deltaX) > paneWidth / 2) {
       if(deltaX > 0) {
@@ -191,7 +191,7 @@ function Carousel(el) {
     } else {
       self.throttledShowPane(paneActiveIdx, true);
     }
-  }
+  }*/
   
   function hammerTime(ev) {
     switch(ev.type) {
