@@ -166,3 +166,7 @@ fieldset {
 .fsSubmitButton {
   background-color: gray;
 }
+
+a{
+  color: var(--text_col);
+}
