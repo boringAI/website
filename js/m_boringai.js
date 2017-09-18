@@ -168,8 +168,8 @@ function Carousel(el) {
       $container.css("left", px+"px");
     }
   }
-/*
-  function updateContainerOffsetX(deltaX, direction) {
+  
+ /* function updateContainerOffsetX(deltaX, direction) {
     var dragOffset = ((100/paneWidth) * deltaX) / paneCount;
     
     var slowRight = paneActiveIdx == 0  && direction == Hammer.DIRECTION_RIGHT;
@@ -191,8 +191,8 @@ function Carousel(el) {
     } else {
       self.throttledShowPane(paneActiveIdx, true);
     }
-  }*/
-  
+  }
+  */
   function hammerTime(ev) {
     switch(ev.type) {
       case 'panmove': 
@@ -212,8 +212,8 @@ function Carousel(el) {
     dragBlockHorizontal: true
   });
   mc.add(new Hammer.Pan({ threshold: 10, pointers: 0 }));
-  /*mc.add(new Hammer.Swipe().recognizeWith(mc.get('pan')));
-  mc.on("swipeleft swiperight panstart panmove", hammerTime);*/
+  mc.add(new Hammer.Swipe().recognizeWith(mc.get('pan')));
+  mc.on("swipeleft swiperight panstart panmove", hammerTime);
   mc.on("hammer.input", function (ev) {
     if (ev.isFinal) {
       onPressRelease(ev.deltaX, ev.direction);
