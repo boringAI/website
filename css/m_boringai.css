@@ -167,7 +167,7 @@ fieldset {
   background-color: gray;
 }
 
-a{
+a:link{
   color: var(--text_col);
   font-weight: bold;
 }
