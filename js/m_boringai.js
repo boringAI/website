@@ -168,7 +168,7 @@ function Carousel(el) {
       $container.css("left", px+"px");
     }
   }
-  
+/*
   function updateContainerOffsetX(deltaX, direction) {
     var dragOffset = ((100/paneWidth) * deltaX) / paneCount;
     
@@ -191,7 +191,7 @@ function Carousel(el) {
     } else {
       self.throttledShowPane(paneActiveIdx, true);
     }
-  }
+  }*/
   
   function hammerTime(ev) {
     switch(ev.type) {
