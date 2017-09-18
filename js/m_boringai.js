@@ -213,7 +213,6 @@ function Carousel(el) {
   });
   mc.add(new Hammer.Pan({ threshold: 10, pointers: 0 }));
   mc.add(new Hammer.Swipe().recognizeWith(mc.get('pan')));
-  mc.on("swipeleft swiperight panstart panmove", hammerTime);
   mc.on("hammer.input", function (ev) {
     if (ev.isFinal) {
       onPressRelease(ev.deltaX, ev.direction);
