@@ -169,4 +169,5 @@ fieldset {
 
 a{
   color: var(--text_col);
+  font-weight: bold;
 }
